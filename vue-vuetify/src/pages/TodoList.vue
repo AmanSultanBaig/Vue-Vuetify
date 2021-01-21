@@ -8,7 +8,7 @@
         :headers="headers"
         :items="desserts"
         :items-per-page="5"
-        class="elevation-1 "
+        class="elevation-1 custom-table-style"
       ></v-data-table>
     </v-container>
   </div>
@@ -204,6 +204,9 @@ export default {
 </script>
 
 <style scoped>
+.custom-table-style {
+  margin-bottom: 6rem;
+}
 .custom-button-style {
   margin-bottom: 1rem;
 }
