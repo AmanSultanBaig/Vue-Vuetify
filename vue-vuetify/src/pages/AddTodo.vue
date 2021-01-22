@@ -1,12 +1,45 @@
 <template>
-  <div>
-    <h1>Add Todo</h1>
-  </div>
+  <v-container>
+    <v-form ref="form" v-model="valid" lazy-validation>
+      <v-text-field
+        v-model="name"
+        :counter="10"
+        :rules="nameRules"
+        label="Name"
+        required
+      ></v-text-field>
+
+      <v-text-field
+        v-model="email"
+        :rules="emailRules"
+        label="E-mail"
+        required
+      ></v-text-field>
+
+      <v-checkbox
+        v-model="checkbox"
+        :rules="[v => !!v || 'You must agree to continue!']"
+        label="Are you sure?"
+        required
+      ></v-checkbox>
+
+      <v-btn color="red" dark class="mr-4" @click="reset">
+        Add +
+      </v-btn>
+
+    </v-form>
+  </v-container>
 </template>
 
 <script>
 export default {
-  name: "AddTodo"
+  name: "AddTodo",
+  data: () => ({
+    rules: [
+      value => !!value || "Required.",
+      value => (value && value.length >= 3) || "Min 3 characters"
+    ]
+  })
 };
 </script>
 
