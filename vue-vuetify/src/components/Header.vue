@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-app-bar color="deep-purple accent-4" dark>
-      <v-toolbar-title>Vue Vuetify</v-toolbar-title>
+    <v-app-bar color="red accent-4" dark>
+      <v-toolbar-title class="text-center">Vue Vuetify</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
   </div>

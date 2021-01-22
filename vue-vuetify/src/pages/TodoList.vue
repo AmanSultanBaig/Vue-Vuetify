@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-container>
-      <v-btn color="deep-purple accent-4" dark class="custom-button-style">
-        Add Todo
+      <v-btn color="red accent-4" dark class="custom-button-style">
+        Add User
       </v-btn>
       <v-data-table
         :headers="headers"
-        :items="desserts"
+        :items="users"
         :items-per-page="5"
         class="elevation-1 custom-table-style"
       ></v-data-table>
@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      desserts: [],
+      users: [],
       headers: [
         { text: "Id", value: "id" },
         { text: "Username", value: "username" },
@@ -46,7 +46,7 @@ export default {
     getPosts() {
       return axios
         .get("https://jsonplaceholder.typicode.com/users")
-        .then(result => (this.desserts = result["data"]))
+        .then(result => (this.users = result["data"]))
         .catch(e => console.log(e));
     }
   },

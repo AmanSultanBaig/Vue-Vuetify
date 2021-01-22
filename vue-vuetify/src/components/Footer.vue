@@ -1,13 +1,13 @@
 <template>
-  <v-footer class="footer" color="deep-purple accent-4" dark>
+  <v-footer class="footer" color="red accent-4" dark>
     <v-row justify="center" no-gutters>
       <v-col
-        class="deep-purple accent-4 py-4 text-center white--text"
+        class="red accent-4 py-4 text-center white--text"
         cols="12"
       >
        All Rights Reserved @ {{ new Date().getFullYear() }}
         <strong
-          ><a href="http://amansultanbaig.mystrikingly.com/"
+          ><a target="blank" href="http://amansultanbaig.mystrikingly.com/"
             >AmanSultanBaig</a
           ></strong
         >
