@@ -23,8 +23,8 @@
         required
       ></v-checkbox>
 
-      <v-btn color="red" dark class="mr-4" @click="addUser()">
-        Add +
+      <v-btn color="green" dark class="mr-4 mt-5" @click="addUser()">
+        Add User
       </v-btn>
     </v-form>
   </v-container>
@@ -36,7 +36,10 @@ import FormValidation from "../components/FormRule";
 export default {
   name: "AddTodo",
   data: () => ({
+    valid: true,
+    checkbox: false,
     name: "",
+    email: "",
     // form validation rules
     nameRules: FormValidation.nameRules,
     emailRules: FormValidation.emailRules,
@@ -46,7 +49,11 @@ export default {
   methods: {
     addUser() {
       if (this.$refs.form.validate()) {
-        console.log(this.$refs.form);
+        let formObject = {
+          name: this.name,
+          email: this.email
+        };
+        console.log(formObject);
       }
     }
   }
