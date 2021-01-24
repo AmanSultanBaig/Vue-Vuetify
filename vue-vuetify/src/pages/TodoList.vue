@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-container>
-      <v-btn color="red accent-4" dark class="custom-button-style">
+      <v-btn @click="$router.push('add-user')" color="red accent-4" dark class="custom-button-style">
         Add User
       </v-btn>
       <v-data-table
